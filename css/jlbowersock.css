@@ -1,0 +1,455 @@
+/*==================================
+Body
+===================================*/
+body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden; /*hides bottom scroll bar during animations.*/
+    z-index: 0;
+}
+
+/*==================================
+Navbar
+===================================*/
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 625px; /*length of navbar. i used px here (vs. vw) due to monitor resolutions.*/
+    border-radius: 0px 0px 15px 0px; /*rounds bottom-right edge of navbar.*/
+    z-index: 4;
+    -webkit-animation: move_navbar 2s; /* Animation seconds for Safari 4.0-8.0 */
+    animation: move_navbar 2s;
+    opacity: 0.9;
+}
+
+@keyframes move_navbar {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+.navbar a {
+    float: left; /*puts sections side by side.*/
+    color: white;
+    padding: 14px 16px; /*navbar size.*/;
+    text-decoration: none; /*removed underlines, etc.*/
+    font-family: Avant Garde, Helvetica;
+    font-size: 18px;
+    position: relative;
+    -webkit-animation: move_navbar_text 1s; /* Animation seconds for Safari 4.0-8.0 */
+    animation: move_navbar_text 1s;
+}
+
+@keyframes move_navbar_text {
+    from {left: -100vw;}
+    to {left: 0vw}
+}
+
+@media screen and (max-width: 576px) {
+    .navbar a{
+        width: 25%;
+        font-size: 12px;
+    }
+}
+
+.navbar a:hover {
+    color: yellow;
+    cursor: pointer;
+    transition: 0.25s ease-in;
+}
+
+/*==================================
+Home
+===================================*/
+.monitors img {
+    position: absolute;
+    margin-left: 600px;
+    width: 1000px;
+    height: auto;
+    animation: move_monitor_image 2s;
+    transform: translate(200px, -600px);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+@keyframes move_monitor_image {
+    from {transform: translate(1500px, -600px)}
+    to {transform: translate(200px, -600px)}
+}
+
+.name {
+    padding-left: 60px;
+    font-size: 70px;
+    margin-top: 380px;
+}
+
+.title {
+    padding-left: 60px;
+    font-size: 20px;
+}
+
+/*==================================
+About
+===================================*/
+.about_container {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/container_background.jpg');
+    width: 45vw;
+    height: 375px;
+    margin-left: 60px;
+    margin-top: 40px;
+    border-radius: 16px;
+    z-index: 2;
+    position: relative; /*in order for z-index to work, this is required.*/
+}
+
+.about_content {
+    float: left;
+    padding-left: 55px;
+    padding-top: 45px;
+    font-size: 19px;
+}
+
+.about_image {
+    position: absolute;               
+    transform: translate(-18px, 0px);
+    z-index: 3;
+}
+
+.signature_image {
+    position: absolute; /*must be absolute, or will disrupt other items.*/
+    -webkit-animation: move_signature 6s; /* Animation seconds for Safari 4.0-8.0 */
+    animation: move_signature 6s;
+    transform: translate(650px, -290px);
+    z-index: 3;
+}
+
+@keyframes move_signature {
+    from {transform: translate(-1000px, -290px)}
+    to {transform: translate(650px, -290px)}
+}
+
+/*==================================
+Skills
+===================================*/
+.skills_container {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/container_background.jpg');
+    width: 92vw;
+    height: 325px;
+    margin-left: 60px;
+    margin-top: 65px;
+    border-radius: 16px;
+    z-index: 2;
+}
+
+.skills_image {
+    position: absolute;               
+    transform: translate(-18px, 0px);
+    z-index: 3;
+}
+
+.skillsRow1 {
+    display: flex; /*puts all of the images side by side.*/
+    justify-content: center; /*centers images within page.*/
+}
+
+.skillsRow2 {
+    display: flex; /*puts all of the images side by side.*/
+    justify-content: center; /*centers images within page.*/
+}
+
+.skillsRow3 {
+    display: flex; /*puts all of the images side by side.*/
+    justify-content: center; /*centers images within page.*/
+}
+
+.skillsRow4 {
+    display: flex; /*puts all of the images side by side.*/
+    justify-content: center; /*centers images within page.*/
+}
+
+.skillsRow1 img {
+   width: 120px;
+}
+
+.skillsRow2 img {
+    width: 120px;
+}
+
+.skillsRow3 img {
+    width: 120px;
+}
+
+.skillsRow4 img {
+    width: 120px;
+}
+
+.column3 { /*languages logos*/
+    float: left;
+    width: 31%;
+    padding-left: 90px;
+    padding-top: 1.9%;
+    height: 390px;
+}
+
+.column4 { /*text content*/
+    float: left;
+    width: 34%;
+    padding-top: 2.1%; /*text position from top*/
+    height: 390px;
+    color: white;
+    text-align: center;
+    font-size: 19px;
+}
+
+.column5 { /*software logos*/
+    float: left;
+    width: 33%;
+    padding-right: 90px;
+    padding-top: 1.9%;
+    height: 390px;
+}
+
+/*==================================
+Projects
+===================================*/
+.projects_container {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/container_background.jpg');
+    width: 92vw;
+    height: auto;
+    margin-left: 60px;
+    margin-top: 65px; /*space between section above.*/
+    border-radius: 16px;
+    z-index: 2;
+}
+
+.projects_image {
+    position: absolute;               
+    transform: translate(-15px, 16px);
+    z-index: 3;
+}
+
+* { 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container1 {
+    display: flex; /*puts all of the cards side by side.*/
+    justify-content: center; /*centers cards within page.*/
+    padding-top: 35px;
+    padding-bottom: 0px;
+}
+
+.container2 {
+    display: flex; /*puts all of the cards side by side.*/
+    justify-content: center; /*centers cards within page.*/
+    padding-top: 0px;
+    padding-bottom: 35px;
+}
+
+.card {
+    background: rgb(30, 28, 28); /*card background color.*/
+    width: 300px; /*card width.*/
+    height: 450px; /*card height.*/
+    margin: 19px; /*margin between cards.*/
+    border-radius: 8px; /*rounds bottom edges of cards.*/
+}
+
+.card-image {
+    background-color: grey; /*card-image background color, this is used to adjust size prior to linking image (below).*/
+    height: 200px; /*card-image height.*/
+    margin-bottom: 0px; /*margin from bottom of image to text.*/
+    background-size: cover; /*centers image.*/
+    border-radius: 8px 8px 0 0; /*rounds top edges of cards.*/
+}
+
+/*When you upload this page online, you'll need to change the folder paths below*/
+
+.card-1 {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/fifteenfortune.jpg');
+}
+
+.card-2 {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/filetransfer.png');
+}
+
+.card-3 {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/calculator_cover_photo.jpg');
+}
+
+.card-4 {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/tictactoeboy.jpg');
+}
+
+.card-5 {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/skatecontest.png');
+}
+
+.card-6 {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/comingsoon.jpg');
+}
+
+.card-7 {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/steakhouse.jpg');
+}
+
+.card-8 {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/theater.png');
+}
+
+.card-9 {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/comingsoon.jpg');
+}
+
+.card-10 {
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/comingsoon.jpg');
+}
+
+.card p {
+    text-align: center; /*centers text within card.*/
+    padding: 6px; /*adding padding to all <p> sectors (card descriptions) within the div class 'card'*/
+}
+
+.card h3 {
+    text-align: center; /*centers text within card.*/
+    padding-top: 14px; /*pads top of all <h3> sectors (card titles) within the div class 'card'*/
+    padding-bottom: 8px; /*pads bottom of all <h3> sectors (card titles) within the div class 'card'*/
+}
+
+.card a { /*all <a href> sectors*/
+    background-color: rgb(0, 0, 0); /*background color of link.*/
+    color: white; /*text color of link.*/
+    padding: 9px 0px; /*padding of link within background box. first number is top/bottom, second is from left-hand side.*/
+    display: block; /**/
+    text-align: center; /*centers link within card.*/
+    margin: 10px 90px; /*margin of link within background box. first number is top/bottom, second is from side to side.*/
+    font-size: 16px;
+    border-radius: 5px; /*rounds edges of background box.*/
+    text-decoration: none; /*this removed all decorations on the text (underlines, italics, etc.)*/
+}
+
+.card a:hover {
+    color: yellow; /*click here button text color (on hover)*/
+}
+
+.card:hover {
+    
+    background-color: rgba(92, 88, 88, 0.712); /*background color when mouse cursors over card.*/
+    color: rgb(255, 255, 255); /*text color when mouse cursors over card.*/
+    transform: scale(1.02); /*card expansion when mouse cursors over.*/
+    transition: all 0.75s ease; /*total time of transition.*/
+}
+
+/*==================================
+Contact
+===================================*/
+/* Button used to open the contact form - fixed at the bottom of the page */
+.Pop_Up_Button {
+    position: fixed; /* The element is positioned relative to the viewport and stays in the same location no matter what */
+    bottom: 1.75vw; /* Positions the button slightly up from the bottom of the viewport */
+    right: 1.75vw; /* Positions the viewport slightly right from the side of the viewport */
+    width: 12vw; /* Sets the width (of the pop-up box) relative to the viewport width */
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/container_background.jpg');
+    color: white; /* Sets the color of the button text to white */
+    border: solid black; /* This makes a solid black border around the button */
+    cursor: pointer; /* This changes the cursor when hovered over the button to a pointer */
+    -webkit-animation: movePopup 6s; /* Animation seconds for Safari 4.0-8.0 */
+    animation: movePopup 6s; /* Animation seconds */
+    z-index: 3; /*this has to be here due to the animation below.*/
+    border-color: gray;
+}
+
+/* movePopup animation moves the button from off the right side of the screen to its fixed location on the viewport */
+@keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+/* Styling for the contact form */
+.form-popup {
+    z-index: 8; /* This z-index ensures the contact form shows above all other elements on the page */
+    display: none; /* Set the display to none, we will use JavaScript to show the contact form */
+    position: fixed; /* The form stays in the same location no matter what */
+    bottom: .5vw; /* Slightly up from the bottom of the viewport */
+    right: .5vw; /* Slightly in from the right side of the viewport */
+    color: white; /*text color in form.*/
+}
+
+/* Form styling */
+.form-container {
+    max-width: 22vw; /* Relative sizing of the form container - 22% of the viewport width */
+    padding: 1vw; /* Adds padding between the form-popup and the form-container */
+    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/container_background.jpg');
+    border-radius: 8px;
+}
+
+/* Input fields */
+.form-container input[type=text] {
+    width: 100%; /* The input boxes completely fill the width of the form-container */
+    padding: .93vw; /* Adds padding to the input boxes */
+    margin: .6vw 0 .6vw 0; /* Adds space between the input boxes and the labels */
+    border: none; /* Removes the border from the input boxes */
+    background: black; /* Sets the background color of the input boxes */
+    font-size: 1vw; /* Relative font sizing based on the width of the viewport */
+    color: yellow;
+}
+
+/* General styling for all buttons */
+button {
+    letter-spacing: .1vw; /* Adds slight spacing between the letters */
+    font-size: 1.5vw; /* Relative sizing of text */ 
+    padding: 2vw; /* Adds padding to the text in the button */
+    cursor: pointer; /* Changes the cursor to pointer over button elements */
+    width: 48%; /* Sets the width of the buttons to 100% of their containers */
+    height: auto; /* Allows the height to be resized depending on the content showing */
+}
+
+/* Hover effect for contact and submit buttons */
+button:hover, .form-container .btn:hover {
+    color: yellow; /* This makes the text in the buttons white when hovered over */
+    background-color: black; /* The background of the button changes to black when hovered over */
+    transition-duration: 1s; /* This makes the transition last 1 second */
+    -webkit-transition-duration: 1s; /* For Safari 4.0-8.0 */
+    border-color: silver; /* The border turns silver when the button is hovered over */
+}
+
+/* Submit button */
+.form-container .btn {
+    background-color: black; 
+    color: white;
+    border-color: gray;
+    margin-bottom: 1vh; /* Adds space between the submit button and the close button */
+}
+
+/* Close button */
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+/* Styling for close button on hover */
+.form-container .cancel:hover {
+    color: red;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s; /* Animation seconds for Safari 4.0-8.0 */
+    border-color: grey;
+}
+
+/*==================================
+Footer
+===================================*/
+footer {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding: 24px;
+    color: white;
+}
