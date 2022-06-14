@@ -268,7 +268,7 @@ Projects
 /*When you upload this page online, you'll need to change the folder paths below*/
 
 .card-1 {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/fifteenfortune.jpg');
+    background-image: url('../images/fifteenfortune.jpg');
 }
 
 .card-2 {
