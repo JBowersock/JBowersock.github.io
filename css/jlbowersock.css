@@ -93,7 +93,7 @@ Home
 About
 ===================================*/
 .about_container {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/container_background.jpg');
+    background-image: url('../images/container_background.jpg');
     width: 45vw;
     height: 375px;
     margin-left: 60px;
@@ -133,7 +133,7 @@ About
 Skills
 ===================================*/
 .skills_container {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/container_background.jpg');
+    background-image: url('../images/container_background.jpg');
     width: 92vw;
     height: 325px;
     margin-left: 60px;
@@ -214,7 +214,7 @@ Skills
 Projects
 ===================================*/
 .projects_container {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/container_background.jpg');
+    background-image: url('../images/container_background.jpg');
     width: 92vw;
     height: auto;
     margin-left: 60px;
@@ -272,39 +272,39 @@ Projects
 }
 
 .card-2 {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/filetransfer.png');
+    background-image: url('../images/filetransfer.png');
 }
 
 .card-3 {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/calculator_cover_photo.jpg');
+    background-image: url('../images/calculator_cover_photo.jpg');
 }
 
 .card-4 {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/tictactoeboy.jpg');
+    background-image: url('../images/tictactoeboy.jpg');
 }
 
 .card-5 {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/skatecontest.png');
+    background-image: url('../images/skatecontest.png');
 }
 
 .card-6 {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/comingsoon.jpg');
+    background-image: url('../images/comingsoon.jpg');
 }
 
 .card-7 {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/steakhouse.jpg');
+    background-image: url('../images/steakhouse.jpg');
 }
 
 .card-8 {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/theater.png');
+    background-image: url('../images/theater.png');
 }
 
 .card-9 {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/comingsoon.jpg');
+    background-image: url('../images/comingsoon.jpg');
 }
 
 .card-10 {
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/comingsoon.jpg');
+    background-image: url('../images/comingsoon.jpg');
 }
 
 .card p {
@@ -351,7 +351,7 @@ Contact
     bottom: 1.75vw; /* Positions the button slightly up from the bottom of the viewport */
     right: 1.75vw; /* Positions the viewport slightly right from the side of the viewport */
     width: 12vw; /* Sets the width (of the pop-up box) relative to the viewport width */
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/container_background.jpg');
+    background-image: url('../images/container_background.jpg');
     color: white; /* Sets the color of the button text to white */
     border: solid black; /* This makes a solid black border around the button */
     cursor: pointer; /* This changes the cursor when hovered over the button to a pointer */
@@ -386,7 +386,7 @@ Contact
 .form-container {
     max-width: 22vw; /* Relative sizing of the form container - 22% of the viewport width */
     padding: 1vw; /* Adds padding between the form-popup and the form-container */
-    background-image: url('C:/Users/Streaming Desktop/Desktop/TTA/Dark Portfolio/images/container_background.jpg');
+    background-image: url('../images/container_background.jpg');
     border-radius: 8px;
 }
 
