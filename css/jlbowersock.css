@@ -342,6 +342,18 @@ Projects
     transition: all 0.75s ease; /*total time of transition.*/
 }
 
+.under_construction_card9 {
+    position: absolute;               
+    transform: translate(1190px, 857px);
+    z-index: 3;
+}
+
+.under_construction_card10 {
+    position: absolute;               
+    transform: translate(1530px, 857px);
+    z-index: 3;
+}
+
 /*==================================
 Contact
 ===================================*/
