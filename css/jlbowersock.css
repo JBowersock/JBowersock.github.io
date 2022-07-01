@@ -255,6 +255,7 @@ Projects
     height: 450px; /*card height.*/
     margin: 19px; /*margin between cards.*/
     border-radius: 8px; /*rounds bottom edges of cards.*/
+    font-size: 16px;
 }
 
 .card-image {
