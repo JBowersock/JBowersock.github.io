@@ -16,7 +16,7 @@ Navbar
     background-color: black;
     position: fixed;
     top: 0;
-    width: 625px; /*length of navbar. i used px here (vs. vw) due to monitor resolutions.*/
+    width: 720px; /*length of navbar. i used px here (vs. vw) due to monitor resolutions.*/
     border-radius: 0px 0px 15px 0px; /*rounds bottom-right edge of navbar.*/
     z-index: 4;
     -webkit-animation: move_navbar 2s; /* Animation seconds for Safari 4.0-8.0 */
