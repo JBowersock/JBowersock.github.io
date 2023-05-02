@@ -1,0 +1,340 @@
+/*----------------
+Body
+----------------*/
+body {
+	background-color: black;
+	color: white;
+	font-size: 0.9vw;
+	overflow: hidden;
+}
+
+/*----------------
+Navbar
+----------------*/
+.navbar {
+	overflow: hidden;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	width: 16vw; /*length of navbar*/
+	font-size: 0.8vw;
+	border-radius: 0px 0px 15px 0px; /*rounds bottom-right edge of navbar.*/
+	z-index: 2;
+	-webkit-animation: move_navbar 2s; /* Animation seconds for Safari 4.0-8.0 */
+	animation: move_navbar 2s;
+	opacity: 0.9;
+}
+
+@keyframes move_navbar {
+	from {
+		left: -100vw;
+	}
+
+	to {
+		left: 0vw;
+	}
+}
+
+.navbar a {
+	float: left; /*puts sections side by side.*/
+	color: white;
+	padding: 14px 16px; /*navbar size.*/
+	;
+	text-decoration: none; /*removed underlines, etc.*/
+	font-family: Avant Garde, Helvetica;
+	font-size: 18px;
+	position: relative;
+	-webkit-animation: move_navbar_text 2s; /* Animation seconds for Safari 4.0-8.0 */
+	animation: move_navbar_text 2s;
+}
+
+@keyframes move_navbar_text {
+	from {
+		left: -100vw;
+	}
+
+	to {
+		left: 0vw
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.navbar a {
+		width: 25%;
+		font-size: 12px;
+	}
+}
+
+.navbar a:hover {
+	color: darkorange;
+	cursor: pointer;
+	transition: 0.25s ease-in;
+}
+
+.navtext {
+	padding-left: 20px;
+}
+
+/*----------------
+Home
+----------------*/
+.name {
+	z-index: 2;
+	font-size: 4vw;
+	color: white;
+	position: absolute; /*Forces text to stay at location when scrolling.*/
+	top: 13vw;
+	left: 4vw;
+}
+
+.occupation {
+	z-index: 2;
+	font-size: 1.5vw;
+	font-weight: bold;
+	color: darkorange;
+	position: absolute;
+	top: 17.5vw;
+	left: 4vw;
+}
+
+.abramstank img {
+	position: absolute;
+	top: 1.75vw;
+	right: -30px;
+	z-index: 2;
+	width: 48vw;
+	animation: move_tank_image 5s;
+	transform: translate(0px, 0px);
+}
+
+@keyframes move_tank_image {
+	from {
+		transform: translate(1200px, 200px)
+	}
+
+	to {
+		transform: translate(0px, 0px)
+	}
+}
+
+.homephoto img {
+	position: relative;
+	top: -120px;
+	z-index: 1;
+	max-width: 105%;
+}
+
+.awsphoto {
+	position: absolute;
+	z-index: 5;
+	right: 0;
+	top: 0;
+	animation: move_aws_image 2s;
+	transform: translate(0px, 0px);
+}
+
+@keyframes move_aws_image {
+	from {
+		transform: translate(1200px, 200px)
+	}
+
+	to {
+		transform: translate(0px, 0px)
+	}
+}
+
+/*----------------
+About
+----------------*/
+.column1 {
+	width: 33%;
+	height: 600px;
+	float: left;
+	z-index: 3;
+	position: relative;
+	text-align: center;
+	top: -135px;
+	padding-top: 50px;
+}
+
+.column2 {
+	width: 34%;
+	height: 600px;
+	float: left;
+	z-index: 3;
+	position: relative;
+	text-align: center;
+	font-size: 18px;
+	top: -120px;
+}
+
+.column3 {
+	width: 33%;
+	height: 600px;
+	float: left;
+	z-index: 3;
+	position: relative;
+	text-align: center;
+	top: -135px;
+	padding-top: 50px;
+}
+
+.designed {
+	opacity: 25%;
+	font-size: 0.7vw;
+}
+
+.weldschool {
+	opacity: 30%;
+	color: darkorange;
+	font-weight: bold;
+	font-size: 0.7vw;
+}
+
+/*==================================
+Slideshow Style Section
+===================================*/
+#Slideshow_Background {
+	background: rgba(0, 0, 0, 0.89); /* This creates a slightly transparent white background that's palced over the video in the background */
+}
+
+.mySlides {
+	display: none; /* This prevents the images from being displayed, we will use JS to display these */
+}
+
+/* Slideshow section / container */
+#Slideshow_Container {
+	width: 31vw; /* Relative sizing of the container for the slidewshow set to 39.5% of the viewport width */
+	height: auto; /* The height of the container is automatically adjusted based on the content it is displaying */
+	padding-top: 55px; /* Adds a small padding to the top of the slideshow container */
+	position: relative; /* This sets the container relative to its normal positioning */
+	margin: auto; /* This will horizontally center the container on the page */
+}
+
+/* Remove the underline from the previous and next buttons on the slideshow */
+#Slideshow_Container a {
+	text-decoration: none;
+}
+
+/* Images contained within the slideshow */
+.Slideshow_Images {
+	vertical-align: middle; /* This centers the images vertically within the slideshow container */
+	box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75); /* Adds a shadow around the slideshow images */
+	width: 100%; /* The width of the images is automatically adjusted based on the content */
+	border-radius: 14px;
+}
+
+/* Next and previous buttons */
+.Previous, .Next {
+	cursor: pointer; /* Changes the mouse to a pointer when the buttons are selected */
+	position: absolute; /* This makes the next and previous buttons positioned relative to the slideshow container */
+	top: 42%; /* This moves the buttons up in the slideshow container */
+	width: 0px; /* The width of the buttons is automatically adjusted based on the content */
+	padding: 2vw; /* Adds padding equal to 2% of the viewport width */
+	color: white;
+	font-weight: bold;
+	font-size: 1.5vw;
+	border-radius: 0 3px 3px 0; /* Adds a slightly rounded border on the top and bottom right corners */
+	user-select: none; /* This property makes it so that the user cannot highlight the text */
+	transition: 0.6s ease; /* This specifies the details of the hover transition for these elements */
+}
+
+.Previous {
+	left: 0;
+}
+
+/* Positioning the next button on the right hand side */
+.Next {
+	right: 0; /* This moves the next button to the right side of the slideshow container */
+	border-radius: 3px 0 0 3px; /* This changes the border radius on the next button to the top and bottom left of the button */
+}
+
+	/* Hover effect on slide show buttons */
+	.Previous:hover, .Next:hover {
+		background-color: rgba(0, 0, 0, 0.8); /* Makes the background of the arrows a transparent gray color */
+		color: white; /* Makes the arrows white when hovered over */
+	}
+
+/* Slideshow text */
+.text {
+	color: orange;
+	padding: 1vw;
+	position: absolute; /* This ensures the text is positioned within the image */
+	bottom: 0; /* This property sets the text at the bottom of the image */
+	width: 100%; /* The element covers the full width of the image */
+	text-align: left;
+	font-family: Perpetua, Rockwell Extra Bold;
+	letter-spacing: .1vw; /* This gives slight spacing between the letters */
+	font-size: 1.5vw; /* Font size is relative to the size of the viewport width */
+}
+
+/* Styling of the dots under the slideshow */
+.dot {
+	cursor: pointer; /* The cursor changes to pointer when hovered over the dots */
+	height: 0.4vw; /* The dots are sized relative to the viewport width */
+	width: 0.4vw;
+	margin: .50vw; /* adds additional spacing between the dots */
+	background-color: white; /* Makes the dots white */
+	border-radius: 50%; /* Makes the dots circles by rounding each corner */
+	display: inline-block; /* Allows the dots to sit next to eachother rather than on a new line */
+	transition: background-color 0.6s ease; /* When clicked on the dots transition to a different color when clicked or hovered over (the affect is defined below) */
+	z-index: 1; /* This ensures the dots will be displayed above any other elements */
+}
+
+	/* Hover effect for slideshow dots */
+	.active, .dot:hover {
+		background-color: darkorange; /* Sets the color of the dots when active or hovered over */
+	}
+
+/* Fading animation for slideshow */
+.fade {
+	animation-name: fade; /* Fade animation is defined below */
+	animation-duration: 1.5s; /* The animation lasts 1.5 seconds */
+	-webkit-animation-name: fade; /* Same as above for Safari 4.0-8.0 */
+	-webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: .4;
+	}
+	/* Image starts transparent */
+	to {
+		opacity: 1;
+	}
+	/* Image ends opaque */
+}
+
+@keyframes fade {
+	from {
+		opacity: .4;
+	}
+	/* Image starts transparent */
+	to {
+		opacity: 1;
+	}
+	/* Image ends opaque */
+}
+
+/*----------------
+Certifications
+----------------*/
+.welding {
+	position: relative;
+	left: 70px;
+}
+
+/*----------------
+Welding Skills
+----------------*/
+.skills {
+	position: relative;
+	left: 70px;
+}
+
+/*----------------
+Contact
+----------------*/
+.contact {
+	text-align: center;
+}
